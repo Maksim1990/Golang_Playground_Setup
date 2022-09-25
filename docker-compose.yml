@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+    app:
+        build:
+            context: ./Docker/Golang
+        volumes:
+            - "./:/go/src/github.com/goPlayground"
+        container_name: golang_playground
+        ports:
+            - "9090:9090"
+        tty: true
